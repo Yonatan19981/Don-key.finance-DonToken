@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.0;
 
-import "./ERC20.sol";
+import "./extensions/ERC20Burnable.sol";
 
-contract Donkey is ERC20 {
+contract Donkey is ERC20Burnable {
 
     constructor() ERC20("Donkey","DON"){
       
@@ -12,4 +12,4 @@ contract Donkey is ERC20 {
         
         _mint(_msgSender(), initialSupply);
     }
-}
+}    
